@@ -1,2 +1,1 @@
-web: gunicorn fb_bot:app
-web: python server.py
+web: gunicorn server:app --log-file=-

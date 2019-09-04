@@ -16,3 +16,4 @@ pytz==2016.10
 repoze.lru==0.6
 requests==2.12.4
 Routes==2.4.1
+gunicorn

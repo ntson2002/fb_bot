@@ -47,8 +47,9 @@ def handle_incoming_messages():
             for messaging_event in entry["messaging"]:
                 if messaging_event.get("message"):        
                     sender = data['entry'][0]['messaging'][0]['sender']['id']
-                    message = data['entry'][0]['messaging'][0]['message']['text']
-                    print("client send: ", message)
+                    query = data['entry'][0]['messaging'][0]['message']['text']                    
+                    print("client send: ", message)                    
+                    message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres (23,622 ft) above sea level. The vast majority of these mountains are located on the edge of the Indian and Eurasian continental plates. "
                     send_message(sender, message)
     
     return "ok"

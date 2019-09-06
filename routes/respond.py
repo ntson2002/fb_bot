@@ -41,13 +41,14 @@ def handle_incoming_messages():
     # print(json.dumps(data, indent=4, ensure_ascii=False))
     # print(data)
     # print("---------------")
-    print(data)
+    
     if data["object"] == "page":
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
                 if messaging_event.get("message"):        
                     sender = data['entry'][0]['messaging'][0]['sender']['id']
                     message = data['entry'][0]['messaging'][0]['message']['text']
+                    print("client send: ", message)
                     send_message(sender, message)
     
     return "ok"

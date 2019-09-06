@@ -41,6 +41,7 @@ def handle_incoming_messages():
     # print(json.dumps(data, indent=4, ensure_ascii=False))
     # print(data)
     # print("---------------")
+    print(data)
     if data["object"] == "page":
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:

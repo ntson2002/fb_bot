@@ -48,7 +48,7 @@ def handle_incoming_messages():
                 if messaging_event.get("message"):        
                     sender = data['entry'][0]['messaging'][0]['sender']['id']
                     query = data['entry'][0]['messaging'][0]['message']['text']                    
-                    print("client send: ", message)                    
+                    print("client send: ", query)                    
                     message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres"
                     send_message(sender, message)
     

@@ -49,7 +49,7 @@ def send_message(sender_id, message_text):
         data=json.dumps({
         "recipient": {"id": sender_id},
         "message": {"text": message_text}}
-        ).encode('utf-8'))
+        ))
 #     print(r.content)
 
 

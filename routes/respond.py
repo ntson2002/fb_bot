@@ -17,6 +17,25 @@ ACCESS_TOKEN = 'EAAh51ZAZCrmYIBAHUqYn8pBlJKvJEkA2sbZBx2oQEUk4uZARv8HDtF3o91z5ZBx
 
 
 
+
+def find_answer(q):
+    url = "http://zalo-assistant.laban.vn/serve_kiki_app/"
+
+    # payload = "{\n        \"question\": \"Mao Trạch Đông sinh năm bao nhiêu\"\n}"
+    payload = {
+        "question": q
+    }
+    headers = {
+        'Content-Type': "application/json",
+        'cache-control': "no-cache",
+        'Postman-Token': "fed98921-b60a-4391-9e12-f00d6fd4d35d"
+        }
+
+    response = requests.request("GET", url, data=json.dumps(payload), headers=headers)
+    return json.loads(response.text)
+    
+
+
 def send_message(sender_id, message_text):
     '''
     Sending response back to the user using facebook graph API
@@ -49,7 +68,8 @@ def handle_incoming_messages():
                     sender = data['entry'][0]['messaging'][0]['sender']['id']
                     query = data['entry'][0]['messaging'][0]['message']['text']                    
                     print("client send: ", query)                    
-                    message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres"
+                    # message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres"
+                    message = find_answer(query)
                     send_message(sender, message)
     
     return "ok"

@@ -69,7 +69,9 @@ def handle_incoming_messages():
                     sender = data['entry'][0]['messaging'][0]['sender']['id']
                     query = data['entry'][0]['messaging'][0]['message']['text']                    
                     print("question: ", query)                    
-                    # message = find_answer(query)
+                    answer = find_answer(query)
+                    print("answer", answer)
+                    print(type(answer))
                     message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres"
                     print("answer", message)
                     send_message(sender, message)

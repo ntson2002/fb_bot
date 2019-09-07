@@ -31,7 +31,7 @@ def find_answer(q):
         'Postman-Token': "fed98921-b60a-4391-9e12-f00d6fd4d35d"
         }
 
-    response = requests.request("GET", url, data=json.dumps(payload), headers=headers)
+    response = requests.request("GET", url, data=json.dumps(payload).encode('utf-8'), headers=headers)
     return json.loads(response.text)
     
 
@@ -69,8 +69,8 @@ def handle_incoming_messages():
                     sender = data['entry'][0]['messaging'][0]['sender']['id']
                     query = data['entry'][0]['messaging'][0]['message']['text']                    
                     print("question: ", query)                    
+                    # message = find_answer(query)
                     message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres"
-#                     message = find_answer(query)
                     print("answer", message)
                     send_message(sender, message)
     

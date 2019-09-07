@@ -50,6 +50,7 @@ def send_message(sender_id, message_text):
         "recipient": {"id": sender_id},
         "message": {"text": message_text}
     }))
+    print(r.content)
 
 
 @routes.route("/auth", methods=['POST'])

@@ -4,7 +4,7 @@ from . import routes
 import requests
 from pprint import pprint
 VERIFY_TOKEN = 'kameronkales'
-ACCESS_TOKEN = 'EAAh51ZAZCrmYIBAHnvZBxmSK8INlImbuqL8ed3Jpfck5vTOyyDnpCKecPBY34bFQzEsh9JUcZAZBHf0mbiRosEd3NlkcAPnHrFW6wxTVZCZBC6ejIL9Uf3v0mOUnaa0ZBGZASA2pA6H5PnZAm1QzZBWyxCulPerARkx96pUf4TLT9UwLQZDZD'
+ACCESS_TOKEN = 'EAAh51ZAZCrmYIBACsZAiB6ktpZASj05YImsjB1E9jmZCqDZBGzXUDHrXyyZCIcqOhkYo8qhZCZCDQ2RJ63xLqT4HrFiUSq1sPhbab8GUPRQ3Nxvt5oPJP0dKZCFatB2NihTZBZAHOmtV5BE4hvjDxMSz90J0mBecO2DgAQpfJ7phJ0VimgZDZD'
 
 # def reply(user_id, msg):	
 #     data = {

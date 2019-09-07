@@ -8,7 +8,7 @@ app.register_blueprint(routes)
 
 @app.route('/')
 def hello_world():
-    ACCESS_TOKEN = 'EAAh51ZAZCrmYIBAHUqYn8pBlJKvJEkA2sbZBx2oQEUk4uZARv8HDtF3o91z5ZBxeS5n8FChbRZB6WsLKZCb3n3QS6yH9TGSFJIe5UPciCpqVZBmqcZBqj8y7cZCwqr5uljzZAHaVPk5yppxDwiWpX2UyTnjw6LHaq78fWf3HTRT77EIxQZDZD'
+#     ACCESS_TOKEN = 'EAAh51ZAZCrmYIBAHUqYn8pBlJKvJEkA2sbZBx2oQEUk4uZARv8HDtF3o91z5ZBxeS5n8FChbRZB6WsLKZCb3n3QS6yH9TGSFJIe5UPciCpqVZBmqcZBqj8y7cZCwqr5uljzZAHaVPk5yppxDwiWpX2UyTnjw6LHaq78fWf3HTRT77EIxQZDZD'
     r = find_answer("Mao trạch đông sinh năm bao nhiêu")
     return r['answer']
 

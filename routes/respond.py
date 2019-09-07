@@ -50,7 +50,7 @@ def send_message(sender_id, message_text):
         "recipient": {"id": sender_id},
         "message": {"text": message_text.encode('utf-8')}
     }))
-    print(r.content)
+#     print(r.content)
 
 
 @routes.route("/auth", methods=['POST'])

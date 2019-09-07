@@ -4,7 +4,7 @@ from . import routes
 import requests
 from pprint import pprint
 VERIFY_TOKEN = 'kameronkales'
-ACCESS_TOKEN = 'EAAh51ZAZCrmYIBACsZAiB6ktpZASj05YImsjB1E9jmZCqDZBGzXUDHrXyyZCIcqOhkYo8qhZCZCDQ2RJ63xLqT4HrFiUSq1sPhbab8GUPRQ3Nxvt5oPJP0dKZCFatB2NihTZBZAHOmtV5BE4hvjDxMSz90J0mBecO2DgAQpfJ7phJ0VimgZDZD'
+ACCESS_TOKEN = 'EAAh51ZAZCrmYIBALZCm3ZBFPpNG68ZBuahi8DAE0Nmhp2ZC9qTr73vsMmkaRueZBIRZCXgtfcxzXEskHiotbdeQKvPHsx5BcPTyvAsySovgt1GzOjEEaFjbqYBTH0kUBK5mc9i5w7pkPXUp2MBhGqqoo7Vy4UPQlrsEaNwLi7qkHZBwZDZD'
 
 # def reply(user_id, msg):	
 #     data = {
@@ -48,7 +48,7 @@ def send_message(sender_id, message_text):
 
         data=json.dumps({
         "recipient": {"id": sender_id},
-        "message": {"text": message_text.encode('utf-8')}
+        "message": {"text": message_text}
     }))
 #     print(r.content)
 

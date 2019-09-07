@@ -72,7 +72,8 @@ def handle_incoming_messages():
                     answer = find_answer(query)
                     print("answer", answer)
                     print(type(answer))
-                    message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres"
+#                     message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres"
+                    message = answer['answer']
                     print("answer", message)
                     send_message(sender, message)
     

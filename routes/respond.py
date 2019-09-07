@@ -48,8 +48,8 @@ def send_message(sender_id, message_text):
 
         data=json.dumps({
         "recipient": {"id": sender_id},
-        "message": {"text": message_text}
-    }).encode('utf-8'))
+        "message": {"text": message_text}}
+        ).encode('utf-8'))
 #     print(r.content)
 
 
@@ -72,6 +72,6 @@ def handle_incoming_messages():
 #                     message = "There are at least 109 mountains on Earth with elevations greater than 7,200 metres"
                     message = find_answer(query)
                     print("answer", message)
-                    send_message(sender, message)
+                    send_message(sender, message[0])
     
     return "ok"
